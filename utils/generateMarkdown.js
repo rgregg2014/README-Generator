@@ -1,64 +1,125 @@
 //------------------Creates Badge Based on User Selected License----------------------
-function renderLicenseBadge(license) {
-  //If a license is selected, which badge is displayed?
-  //If no license selected, return empty string
-}
+//switch statements, dumbass
+// let badge = "";
+// function renderLicenseBadge(license) {
+//   switch (license) {
+//     case "MIT License":
+//       badge = `[<img src="https://img.shields.io/badge/license-MIT-red">] (<LINK>)`;
+//       break;
+//     case "GNU General Public License":
+//       badge = `[<img src="https://img.shields.io/badge/license-GNU-red">] (<LINK>)`;
+//       break;
+//     case "Mozilla Public License 2.0":
+//       badge = `[<img src="https://img.shields.io/badge/license-Mozilla-red">] (<LINK>)`;
+//       break;
+//     case "Unlicense":
+//       badge = `[<img src="https://img.shields.io/badge/license-Unlicense-red">] (<LINK>)`;
+//       break;
+//     case "Apache License 2.0":
+//       badge = `[<img src="https://img.shields.io/badge/license-Apache-red">] (<LINK>)`;
+//       break;
+//     case "Boost Software License 1.0":
+//       badge = `[<img src="https://img.shields.io/badge/license-Boost-red">] (<LINK>)`;
+//       break;
+//     default:
+//       break;
+//   }
+//   return badge;
+// }
+//If a license is selected, which badge is displayed?
+//img.shields.io/badge/license${(userInput)}-blue
+//If no license selected, return empty string
 
 //------------------Renders Link Based on User Selected License-----------------------
-function renderLicenseLink(license) {
-  //If a license is selected, which link is appropriate?
-  //If no license selected, return empty string
-}
+// let link = "";
+// function renderLicenseLink(license) {
+//   switch (license) {
+//     case "MIT License":
+//       link = `https://www.mit.edu/~amini/LICENSE.md`;
+//       break;
+//     case "GNU General Public License":
+//       link = `https://www.gnu.org/licenses/gpl-3.0.en.html`;
+//       break;
+//     case "Mozilla Public License 2.0":
+//       link = `https://www.mozilla.org/en-US/MPL/2.0/`;
+//       break;
+//     case "Unlicense":
+//       link = `https://unlicense.org/`;
+//       break;
+//     case "Apache License 2.0":
+//       link = `http://www.apache.org/licenses/LICENSE-2.0`;
+//       break;
+//     case "Boost Software License 1.0":
+//       link = `https://www.boost.org/LICENSE_1_0.txt`;
+//       break;
+//     default:
+//       break;
+//   }
+//   return link;
+// }
 
 //------------------Renders License Section Based on User Selection-------------------
-let license = function renderLicenseSection(license) {
-  //If a license is selected, put prev 3 functions together to make the section
-  //If no license selected, return an empty string
-};
+// function renderLicenseSection(license) {
+//   renderLicenseBadge(projectLicense);
+//   renderLicenseLink(projectLicense);
+//If a license is selected, put prev 3 functions together to make the section
+//If no license selected, return an empty string
+// }
 
 //----------------------Generates Markdown for README---------------------------------
-function generateMarkdown(data) {
-  //Generate title in a let based on questions.projectTitle w/ `# ${questions.projectTitle}
+// function generateMarkdown({
+//   projectTitle,
+//   projectDesc,
+//   projectUserName,
+//   projectEmail,
+//   projectInstall,
+//   projectUsage,
+//   projectContribute,
+//   projectTest,
+//   projectLicense,
+// }) {
+//   renderLicenseSection(projectLicense);
+//   //template literal for markdown file
+//   return `# ${projectTitle}
+// ## Description
 
-  //Generate Description Section. += to title let
-  //SYNTAX:
-  /*
-      `## Description
-      *What? Why? How?*
-      ${questions.projectDesc}`
-      */
+// ${projectDesc}
 
-  //Generate Licensing Section. += to title let
-  // renderLicenseSection();
+// ## License
 
-  //Generate Table of Contents based on user submissions. += to title let
-  /*SYNTAX: `## Table of Contents
-      conditional statements appending to ToC head w/ 
-      - [Installation](#installation)
-      - [Usage](#usage)
-      - [Contributing](#contributing)
-      - [Testing](#testing)
-      - [Questions](#questions)
-      */
+// ${badge}
+// This project is licensed under the ${projectLicense}.
 
-  //Generate Installation. += to title let
-  //conditional, return empty if no response
+// For more information on this license, please visit [their website](${link})
 
-  //Generate Usage. += to title let
-  //conditional, return empty if no response
+// ## Table of Contents
 
-  //Generate Contributing. += to title let
-  //conditional, return empty if no response
+// - [Installation](#installation)
+// - [Usage](#usage)
+// - [Contributing](#contributing)
+// - [Testing](#testing)
+// - [Questions](#questions)
 
-  //Generate Testing. += to title let
-  //conditional, return empty if no response
+// ## Installation
 
-  //Generate Questions. += to title let
-  //conditional, return empty if no response
-  /*`If you have any questions, please email me at .
-  Or, you can find me on [Github](https://www.github.com/'${questions.projectUserName}`).`*/
+// ${projectInstall}
 
-  return `# ${data.title}`;
-}
+// ## Usage
 
-module.exports = generateMarkdown;
+// ${projectUsage}
+
+// ## Contributing
+
+// ${projectContribute}
+
+// ## Testing
+
+// ${projectTest}
+
+// ## Questions
+
+// If you have any questions, please email me at ${projectEmail}.
+// Or, you can find me on [Github](https://www.github.com/${projectUserName}).`;
+// }
+
+// module.exports = generateMarkdown;
